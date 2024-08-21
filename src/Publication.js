@@ -14,7 +14,8 @@ function Publication() {
         setLan(check)
     }
 
-    return (<div>
+    return (
+            <div>
                 <Navbar exportLanguage={lan} />
                 <Banner importLanguage={importLanguage} />
                 <Menu exportLanguage={lan} />

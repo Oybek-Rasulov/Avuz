@@ -226,9 +226,9 @@ function Navbar(props) {
                         <li><a href="#">Лойиҳа фаолияти</a></li>
                         <li><a href="#">Ахборотнома</a></li>
                         <li><a href="#">Умумий амалиёт шифокори бюллетени</a></li>
-                        <li><Link to="/publication" target={"_blank"}>Узбекистон врачлар ассоциацияси тарихи</Link></li>
-                        <li><Link to="/doctors" target={"_blank"}>Шифокорлар хукуклари</Link></li>
-                        <li><Link to="/members" target={"_blank"}>Кенгаш аъзолари</Link></li>
+                        <li><Link to="/publication">Узбекистон врачлар ассоциацияси тарихи</Link></li>
+                        <li><Link to="/doctors">Шифокорлар хукуклари</Link></li>
+                        <li><Link to="/members">Кенгаш аъзолари</Link></li>
 
                     </ul>}
 

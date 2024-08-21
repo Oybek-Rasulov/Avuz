@@ -15,13 +15,13 @@ function Member() {
     }
 
     return (
-    <div>
-        <Navbar exportLanguage={lan} />
-        <Banner importLanguage={importLanguage} />
-        <Menu exportLanguage={lan} />
-        <MembersComp exportLanguage={lan} />
-        <Footer exportLanguage={lan} />
-    </div>
+        <div>
+            <Navbar exportLanguage={lan} />
+            <Banner importLanguage={importLanguage} />
+            <Menu exportLanguage={lan} />
+            <MembersComp exportLanguage={lan} />
+            <Footer exportLanguage={lan} />
+        </div>
     )
 }
 

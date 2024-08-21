@@ -628,6 +628,10 @@ a {
     display: none;
 }
 
+.members{
+    padding: 2rem 3rem;
+}
+
 
 /* Responsive */
 @media (max-width: 1030px)  {

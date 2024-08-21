@@ -9,29 +9,29 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  [`&.${tableCellClasses.head}`]: {
-    fontSize: 18,
-    backgroundColor: "#9195F6",
-    color: theme.palette.common.white,
-  },
-  [`&.${tableCellClasses.body}`]: {
-    fontSize: 16,
-  },
+    [`&.${tableCellClasses.head}`]: {
+      fontSize: 18,
+      backgroundColor: "#9195F6",
+      color: theme.palette.common.white,
+    },
+    [`&.${tableCellClasses.body}`]: {
+      fontSize: 16,
+    },
 }));
 
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  '&:nth-of-type(odd)': {
-    backgroundColor: "#DFD3C3",
-  },
-  // hide last border
-  '&:last-child td, &:last-child th': {
-    border: 0,
-  },
+  const StyledTableRow = styled(TableRow)(({ theme }) => ({
+    '&:nth-of-type(odd)': {
+      backgroundColor: "#DFD3C3",
+    },
+    // hide last border
+    '&:last-child td, &:last-child th': {
+      border: 0,
+    },
 }));
 
-function createData(name, calories, fat) {
-  return { name, calories, fat};
-}
+    function createData(name, calories, fat) {
+      return { name, calories, fat};
+    }
 
 
 
@@ -103,12 +103,12 @@ function createData2(number, fullName, text) {
       createData3('12', "Мавлянходжаев Равшан Шухратович", "")
     ]
 
-export default function MembersComp(props) {
+function MembersComp(props) {
 
   var lan = props.exportLanguage
 
   return (
-    <div className='archieve'>
+    <div className='members'>
       <h2 className='text'>
         {lan? "Ассоциация врачей Узбекистана" : "Ўзбекистон врачлар ассоциациясининг"} 
       </h2>
@@ -185,3 +185,5 @@ export default function MembersComp(props) {
     </div>
   );
 }
+
+export default MembersComp;
