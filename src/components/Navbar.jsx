@@ -112,7 +112,7 @@ function Navbar(props) {
                         <li><a href="#" onMouseEnter={mouseHoverOnOne} onMouseLeave={mouseHoverOffOne}>Структура <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
                         <li><a href="#" onMouseEnter={mouseHoverOnTwo} onMouseLeave={mouseHoverOffTwo}>Направление работы <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
                         <li><a href="#" onMouseEnter={mouseHoverOnThree} onMouseLeave={mouseHoverOffThree} >Информация для пациентов <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
-                        <li><a href="#" onMouseEnter={mouseHoverOnFour} onMouseLeave={mouseHoverOffFour}>Посещаемость <ArrowDropDownCircleIcon className="nav-icon" /> </a></li>
+                        <li><a href="#" onMouseEnter={mouseHoverOnFour} onMouseLeave={mouseHoverOffFour}>Журнал Вестник <ArrowDropDownCircleIcon className="nav-icon" /> </a></li>
                     </ul>
 
                     <div className="nav-icons">
@@ -149,7 +149,7 @@ function Navbar(props) {
                         </ul>}
 
                 {checkHoverFour && <ul className="hover-ul dropFour" onMouseEnter={mouseHoverOnFour} onMouseLeave={mouseHoverOffFour}>
-                            <li><a href="#">Посещаемость</a></li>
+                            <li><a href="/archieve">Журнал Вестник</a></li>
                         </ul>}
 
             <div className="media-navbar">
@@ -204,7 +204,7 @@ function Navbar(props) {
                     <li><a href="#" onMouseEnter={mouseHoverOnOne} onMouseLeave={mouseHoverOffOne}>Тузилиши <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
                     <li><a href="#" onMouseEnter={mouseHoverOnTwo} onMouseLeave={mouseHoverOffTwo}>Иш йўналиши <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
                     <li><a href="#" onMouseEnter={mouseHoverOnThree} onMouseLeave={mouseHoverOffThree} >Бемор ҳақида маълумот <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
-                    <li><a href="#" onMouseEnter={mouseHoverOnFour} onMouseLeave={mouseHoverOffFour}>Давомат <ArrowDropDownCircleIcon className="nav-icon" /> </a></li>
+                    <li><a href="#" onMouseEnter={mouseHoverOnFour} onMouseLeave={mouseHoverOffFour}>Журнал <ArrowDropDownCircleIcon className="nav-icon" /> </a></li>
                 </ul>
 
                 <div className="nav-icons">
@@ -241,7 +241,7 @@ function Navbar(props) {
                     </ul>}
 
             {checkHoverFour && <ul className="hover-ul dropFour" onMouseEnter={mouseHoverOnFour} onMouseLeave={mouseHoverOffFour}>
-                        <li><a href="#">Давомат</a></li>
+                        <li><a href="/archieve">Журнал</a></li>
                     </ul>}
 
         <div className="media-navbar">
