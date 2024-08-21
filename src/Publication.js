@@ -14,14 +14,13 @@ function Publication() {
         setLan(check)
     }
 
-    return (
-    <div>
-        <Navbar exportLanguage={lan} />
-        <Banner importLanguage={importLanguage} />
-        <Menu exportLanguage={lan} />
-        <PublicationComp exportLanguage={lan} />
-        <Footer exportLanguage={lan} />
-    </div>
+    return (<div>
+                <Navbar exportLanguage={lan} />
+                <Banner importLanguage={importLanguage} />
+                <Menu exportLanguage={lan} />
+                <PublicationComp exportLanguage={lan} />
+                <Footer exportLanguage={lan} />
+            </div>
     )
 }
 
