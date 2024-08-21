@@ -57,40 +57,7 @@ function TabPanel(props) {
         
         const fileInputRef = useRef(null);
         const [selectedFile, setSelectedFile] = useState(null);
-
       
-        const handleButtonClick = () => {
-          fileInputRef.current.click();   
-      
-        };
-      
-        const handleFileChange = (event) => {   
-
-            setSelectedFile(event.target.files[0]);
-        };
-      
-        const handleSubmit = (event) => {
-            event.preventDefault();
-
-            const formData = new FormData();
-            formData.append('image', selectedFile);
-            
-            axios.post('/api/uploadnews', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                    }
-                })
-                .then(response => {
-                console.log('File uploaded successfully',   
-                response.data);
-                })
-                .catch(error => {
-                console.error('Error uploading file', error);   
-
-                });
-          console.log(selectedFile);
-        };
-
 
     const [value, setValue] = React.useState(0);
 
@@ -113,6 +80,21 @@ function TabPanel(props) {
     const handleChangeSelect = (event) => {
         setAge(event.target.value);
       };
+
+      const [file, setFile] = useState({
+        path: '',
+        year: ''
+      })
+
+      function fileInfo(e) {
+        e.persist();
+        setFile({...file, [e.target.name]: [e.target.value]})
+      }
+
+
+      function fileForm(e) {
+        e.preventDefault()
+      }
 
     return (
         <div className='admin-panel'>
@@ -168,7 +150,7 @@ function TabPanel(props) {
                 <h3 className='archieve-title'>Архив</h3>
                 <Box sx={{ minWidth: 120 }}>
                     <FormControl fullWidth>
-                        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                        <InputLabel id="demo-simple-select-label">Archieve</InputLabel>
                         <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
@@ -197,32 +179,34 @@ function TabPanel(props) {
             </TabPanel>
             </Box>
 
-            <form action="/uploadnews" method='post' className="admin-form" onSubmit={handleSubmit} style={callCheck ? {top: "50px",  boxShadow: "0px 0px 0px 100000px #555"} : {top: "-1000px", boxShadow: "none"}} >
+            <form action="/uploadnews" method='post' className="admin-form" style={callCheck ? {top: "50px",  boxShadow: "0px 0px 0px 100000px #555"} : {top: "-1000px", boxShadow: "none"}} >
                 <div className='close'>
                     <button className='close-btn' onClick={() => {setCallCheck(false)}}>
                         <CloseIcon />
                     </button>
                 </div>
-                <input name='image' type="file" placeholder='Rasmni joylang...' className="file-input" ref={fileInputRef} onChange={handleFileChange} />
-                <button className='file-btn' type='button' onClick={handleButtonClick}>
+                {/* <input name='image' type="text" placeholder='Rasmni joylang...' className="file-input" ref={fileInputRef} onChange={handleFileChange} /> */}
+                {/* <button className='file-btn' type='button' onClick={handleButtonClick}>
                     <AddAPhotoIcon fontSize='large'/>
-                </button>
+                </button> */}
+                <input name='link' required type="text" placeholder='Suratni URL manzilini kiriting...'/>
                 <input name='title' required type="text" placeholder='Yangilik sarlavhasini kiriting'/>
                 <textarea name='content' required type="text" placeholder='Yangilik malumotini kiriting...' />
                 <button type='submit' className='admin-btn'>Yuborish</button>
             </form>
 
-            <form action="/uploadarchieve" method='post' enctype="multipart/form-data" className="admin-form" onSubmit={handleSubmit} style={callCheckFile ? {top: "50px",  boxShadow: "0px 0px 0px 100000px #555"} : {top: "-1000px", boxShadow: "none"}} >
+            <form onSubmit={fileForm} method='post' className="admin-form" style={callCheckFile ? {top: "50px",  boxShadow: "0px 0px 0px 100000px #555"} : {top: "-1000px", boxShadow: "none"}} >
                 <div className='close'>
                     <button className='close-btn' onClick={() => {setCallCheckFile(false)}}>
                         <CloseIcon />
                     </button>
                 </div>
-                <input required type="file" placeholder='Rasmni joylang...' className="file-input" ref={fileInputRef} onChange={handleFileChange} />
+                {/* <input required type="file" placeholder='Rasmni joylang...' className="file-input" ref={fileInputRef} onChange={handleFileChange} />
                 <button className='file-btn' type='button' onClick={handleButtonClick}>
                     <AttachFileIcon fontSize='large'/>
-                </button>
-                <input type="number" placeholder='Arxiv yilini kiriting...' required />
+                </button> */}
+                <input type="text" onChange={fileInfo} value={file.path} name="path" placeholder='Faylni URL manzilini kiriting...' required />
+                <input type="number" onChange={fileInfo} value={file.year} name={"year"} placeholder='Arxiv yilini kiriting...' required />
                 <button className='admin-btn' type='submit'>Yuborish</button>
             </form>
         </div>

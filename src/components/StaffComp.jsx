@@ -8,15 +8,27 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-function StaffComp() {
+function StaffComp(props) {
 
-    const rows = [
-        createData('Ассоциации врачей нейрохирургов', "КариевГайрат Маратович", 126),
-        createData('Ассоциации врачей частной практики', "Ваисов Атхам Шавкатович", 9.0),
-        createData('Ассоциации валеологов Узбекистана', "Председатель Иргашев Шухрат Баисович", 16.0),
-        createData('Отделение санитарных врачей и гигиенистов', "Искандаров Тулкин Искандарович", 3.7),
-        createData('Отделение иглорефлексотерапевтов', "Ли Павел Андреевич", 16.0),
+    var lan = props.exportLanguage
+
+    if(lan === true) {
+      var rows = [
+          createData('Ассоциации врачей нейрохирургов', "КариевГайрат Маратович", 126),
+          createData('Ассоциации врачей частной практики', "Ваисов Атхам Шавкатович", 9.0),
+          createData('Ассоциации валеологов Узбекистана', "Председатель Иргашев Шухрат Баисович", 16.0),
+          createData('Отделение санитарных врачей и гигиенистов', "Искандаров Тулкин Искандарович", 3.7),
+          createData('Отделение иглорефлексотерапевтов', "Ли Павел Андреевич", 16.0),
+        ]
+    } else {
+      var rows = [
+        createData('Нейрохирурглар уюшмаси', "КариевГайрат Маратович", 126),
+        createData('Хусусий амалиёт шифокорлари уюшмалари', "Ваисов Атхам Шавкатович", 9.0),
+        createData('Ўзбекистон валеологлари уюшмаси', "Председатель Иргашев Шухрат Баисович", 16.0),
+        createData('Санитария шифокорлари ва гигиенистлар бўлими', "Искандаров Тулкин Искандарович", 3.7),
+        createData('Акупунктур бўлими', "Ли Павел Андреевич", 16.0),
       ];
+    }
 
       const StyledTableCell = styled(TableCell)(({ theme }) => ({
         [`&.${tableCellClasses.head}`]: {
@@ -44,14 +56,14 @@ function StaffComp() {
 
     return (
         <div className='staff-table'>
-            <h2 className='news-title'>Информация о коллективных членах</h2>
+            <h2 className='news-title'>{lan? "Информация о коллективных членах": "Коллектив аъзолар ҳақида маълумот"}</h2>
             <TableContainer component={Paper}>
             <Table sx={{ minWidth: 700 }} aria-label="customized table">
                 <TableHead>
                 <TableRow>
-                    <StyledTableCell align='center'>Название организации</StyledTableCell>
-                    <StyledTableCell align="center">Председатель АВУ</StyledTableCell>
-                    <StyledTableCell align="center">Количество членов&nbsp;</StyledTableCell>
+                    <StyledTableCell align='center'>{lan? "Название организации" : "Ташкилот номи"}</StyledTableCell>
+                    <StyledTableCell align="center">{lan? "Председатель АВУ" : "АВУ раиси"}</StyledTableCell>
+                    <StyledTableCell align="center">{lan? "Количество членов" : "Аъзолар сони"}&nbsp;</StyledTableCell>
                 </TableRow>
                 </TableHead>
                 <TableBody>

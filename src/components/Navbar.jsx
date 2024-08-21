@@ -13,7 +13,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { RichTreeView } from '@mui/x-tree-view/RichTreeView';
 import CloseIcon from '@mui/icons-material/Close';
 
-function Navbar() {
+function Navbar(props) {
+
+    var lan = props.exportLanguage
 
     const [checkHoverOne, setCheckHoverOne] = useState(false);
     const [checkHoverTwo, setCheckHoverTwo] = useState(false);
@@ -103,14 +105,106 @@ function Navbar() {
         setMenu(!menu)
       }
       
+    if (lan === true) {
+        return <div>
+            <nav className="navbar">
+                    <ul className="nav-ul">
+                        <li><a href="#" onMouseEnter={mouseHoverOnOne} onMouseLeave={mouseHoverOffOne}>Структура <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
+                        <li><a href="#" onMouseEnter={mouseHoverOnTwo} onMouseLeave={mouseHoverOffTwo}>Направление работы <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
+                        <li><a href="#" onMouseEnter={mouseHoverOnThree} onMouseLeave={mouseHoverOffThree} >Информация для пациентов <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
+                        <li><a href="#" onMouseEnter={mouseHoverOnFour} onMouseLeave={mouseHoverOffFour}>Посещаемость <ArrowDropDownCircleIcon className="nav-icon" /> </a></li>
+                    </ul>
 
-    return <div>
+                    <div className="nav-icons">
+                        <a href="#"><TelegramIcon /></a>
+                        <a href="#"><InstagramIcon /></a>
+                    </div>
+                </nav>
+
+                {checkHoverOne && <ul className="hover-ul dropOne" onMouseEnter={mouseHoverOnOne} onMouseLeave={mouseHoverOffOne}>
+                            <li><Link to="/staff">Президиум</Link></li>
+                            <li><a href="#">Совет</a></li>
+                            <li><a href="#">Областные отделения</a></li>
+                            <li><a href="#">Коллективные члены</a></li>
+                            <li><Link to="/contact">Как с нами связаться</Link></li>    
+                        </ul>}
+
+                {checkHoverTwo && <ul className="hover-ul dropTwo" onMouseEnter={mouseHoverOnTwo} onMouseLeave={mouseHoverOffTwo}>
+                            <li><Link target={"_blank"} to="http://test.avuz.uz/">Онлайн обучение</Link></li>
+                            <li><a href="#">Проектная деятельность</a></li>
+                            <li><a href="#">Бюллетень</a></li>
+                            <li><a href="#">Вестник врача общей практики</a></li>
+                            <li><Link target={"_blank"} to="/publication">История Ассоциации врачей Узбекистана</Link></li>
+                            <li><Link target={"_blank"} to="/doctors">Права врачей</Link></li>
+                            <li><Link target={"_blank"} to="/members">Члены совета</Link></li>
+
+                        </ul>}
+
+                {checkHoverThree && <ul className="hover-ul dropThree" onMouseEnter={mouseHoverOnThree} onMouseLeave={mouseHoverOffThree}>
+                            <li><a href="#">Профилактика осложнений раневой болезни</a></li>
+                            <li><a href="#">Профилактика диабета</a></li>
+                            <li><a href="#">Профилактика сердечно-сосудистых заболеваний</a></li>
+                            <li><a href="#">Профилактика хронического гепатита</a></li>
+                            <li><a href="#">Интерактивный сервис</a></li>
+                        </ul>}
+
+                {checkHoverFour && <ul className="hover-ul dropFour" onMouseEnter={mouseHoverOnFour} onMouseLeave={mouseHoverOffFour}>
+                            <li><a href="#">Посещаемость</a></li>
+                        </ul>}
+
+            <div className="media-navbar">
+                    <Box sx={{ flexGrow: 1, backgroundColor: "#9195F6"}}>
+                    <AppBar position="static">
+                        <Toolbar>
+                            <div style={{display: menu? "none" : "block"}}>
+                                <IconButton 
+                                    onClick={clickMenu}
+                                    size="large"
+                                    edge="start"
+                                    color="inherit"
+                                    aria-label="menu"
+                                    sx={{ mr: 2 }}
+                                >
+                                    <MenuIcon />
+                                </IconButton>
+                            </div>
+                            <div style={{display: menu? "block" : "none"}}>
+                                <IconButton 
+                                    onClick={clickMenu}
+                                    size="large"
+                                    edge="start"
+                                    color="inherit"
+                                    aria-label="menu"
+                                    sx={{ mr: 2 }}
+                                >
+                                    <CloseIcon />
+                                </IconButton>
+                            </div>
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                            
+                        </Typography>
+                        <Link className="icon" to="#"><TelegramIcon /></Link>
+                        <Link className="icon" to="#"><InstagramIcon /></Link>
+                        </Toolbar>
+                    </AppBar>
+                    </Box>
+
+                <div className="tree" style={menu? { transform: "translateX(0)", display: "block", transition: "1s ease-in"} : null}>
+                    <Box sx={{ minHeight: 352, minWidth: 250 }}>
+                        <RichTreeView items={MUI_X_PRODUCTS} />
+                    </Box>
+                </div>
+                    
+                </div>
+            </div>
+
+    } else {return <div>
         <nav className="navbar">
                 <ul className="nav-ul">
-                    <li><a href="#" onMouseEnter={mouseHoverOnOne} onMouseLeave={mouseHoverOffOne}>Структура <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
-                    <li><a href="#" onMouseEnter={mouseHoverOnTwo} onMouseLeave={mouseHoverOffTwo}>Направление работы <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
-                    <li><a href="#" onMouseEnter={mouseHoverOnThree} onMouseLeave={mouseHoverOffThree} >Информация для пациентов <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
-                    <li><a href="#" onMouseEnter={mouseHoverOnFour} onMouseLeave={mouseHoverOffFour}>Посещаемость <ArrowDropDownCircleIcon className="nav-icon" /> </a></li>
+                    <li><a href="#" onMouseEnter={mouseHoverOnOne} onMouseLeave={mouseHoverOffOne}>Тузилиши <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
+                    <li><a href="#" onMouseEnter={mouseHoverOnTwo} onMouseLeave={mouseHoverOffTwo}>Иш йўналиши <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
+                    <li><a href="#" onMouseEnter={mouseHoverOnThree} onMouseLeave={mouseHoverOffThree} >Бемор ҳақида маълумот <ArrowDropDownCircleIcon className="nav-icon" /></a></li>
+                    <li><a href="#" onMouseEnter={mouseHoverOnFour} onMouseLeave={mouseHoverOffFour}>Давомат <ArrowDropDownCircleIcon className="nav-icon" /> </a></li>
                 </ul>
 
                 <div className="nav-icons">
@@ -121,17 +215,17 @@ function Navbar() {
 
             {checkHoverOne && <ul className="hover-ul dropOne" onMouseEnter={mouseHoverOnOne} onMouseLeave={mouseHoverOffOne}>
                         <li><Link to="/staff">Президиум</Link></li>
-                        <li><a href="#">Совет</a></li>
-                        <li><a href="#">Областные отделения</a></li>
-                        <li><a href="#">Коллективные члены</a></li>
-                        <li><Link to="/contact">Как с нами связаться</Link></li>    
+                        <li><a href="#">Маслаҳат</a></li>
+                        <li><a href="#">Минтақавий филиаллар</a></li>
+                        <li><a href="#">Коллектив аъзолар</a></li>
+                        <li><Link to="/contact">Биз билан қандай боғланиш мумкин</Link></li>    
                     </ul>}
 
             {checkHoverTwo && <ul className="hover-ul dropTwo" onMouseEnter={mouseHoverOnTwo} onMouseLeave={mouseHoverOffTwo}>
-                        <li><Link target={"_blank"} to="http://test.avuz.uz/">Онлайн обучение</Link></li>
-                        <li><a href="#">Проектная деятельность</a></li>
-                        <li><a href="#">Бюллетень</a></li>
-                        <li><a href="#">Вестник врача общей практики</a></li>
+                        <li><Link target={"_blank"} to="http://test.avuz.uz/">Онлайн тренинг</Link></li>
+                        <li><a href="#">Лойиҳа фаолияти</a></li>
+                        <li><a href="#">Ахборотнома</a></li>
+                        <li><a href="#">Умумий амалиёт шифокори бюллетени</a></li>
                         <li><Link target={"_blank"} to="/publication">Узбекистон врачлар ассоциацияси тарихи</Link></li>
                         <li><Link target={"_blank"} to="/doctors">Шифокорлар хукуклари</Link></li>
                         <li><Link target={"_blank"} to="/members">Кенгаш аъзолари</Link></li>
@@ -139,15 +233,15 @@ function Navbar() {
                     </ul>}
 
             {checkHoverThree && <ul className="hover-ul dropThree" onMouseEnter={mouseHoverOnThree} onMouseLeave={mouseHoverOffThree}>
-                        <li><a href="#">Профилактика осложнений раневой болезни</a></li>
-                        <li><a href="#">Профилактика диабета</a></li>
-                        <li><a href="#">Профилактика сердечно-сосудистых заболеваний</a></li>
-                        <li><a href="#">Профилактика хронического гепатита</a></li>
-                        <li><a href="#">Интерактивный сервис</a></li>
+                        <li><a href="#">Яра касаллигининг асоратларининг олдини олиш</a></li>
+                        <li><a href="#">Қандли диабетнинг олдини олиш</a></li>
+                        <li><a href="#">Юрак-қон томир касалликларининг олдини олиш</a></li>
+                        <li><a href="#">Сурункали гепатитнинг олдини олиш</a></li>
+                        <li><a href="#">Интерактив хизмат</a></li>
                     </ul>}
 
             {checkHoverFour && <ul className="hover-ul dropFour" onMouseEnter={mouseHoverOnFour} onMouseLeave={mouseHoverOffFour}>
-                        <li><a href="#">Посещаемость</a></li>
+                        <li><a href="#">Давомат</a></li>
                     </ul>}
 
         <div className="media-navbar">
@@ -195,6 +289,7 @@ function Navbar() {
                 
             </div>
         </div>
+}
 }
 
 export default Navbar; 

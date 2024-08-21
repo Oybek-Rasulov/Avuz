@@ -498,6 +498,8 @@ a {
 
 .archieve {
     padding: 2rem 5rem;
+    position: relative;
+    height: 600px;
 }
 
 .journal-image {

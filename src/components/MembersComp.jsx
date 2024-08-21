@@ -103,14 +103,18 @@ function createData2(number, fullName, text) {
       createData3('12', "Мавлянходжаев Равшан Шухратович", "")
     ]
 
-export default function MembersComp() {
+export default function MembersComp(props) {
+
+  var lan = props.exportLanguage
+
   return (
     <div className='archieve'>
       <h2 className='text'>
-        Ўзбекистон врачлар ассоциациясининг 
+        {lan? "Ассоциация врачей Узбекистана" : "Ўзбекистон врачлар ассоциациясининг"} 
       </h2>
       <h4 className='text'>
-        Кенгаш аъзолари, тафтиш комиссияси ва делегатларнинг рўйхати
+
+        {lan? "Список членов правления, комитета по аудиту и делегатов" : "Кенгаш аъзолари, тафтиш комиссияси ва делегатларнинг рўйхати"}
       </h4>
         <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -136,7 +140,7 @@ export default function MembersComp() {
         </Table>
         </TableContainer>
 
-        <h3 className='text'>Ўзбекистон врачлар Ассоциациясининг раёсатининг таркиби</h3>
+        <h3 className='text'>{lan? "Состав правления Ассоциации врачей Узбекистана" : "Ўзбекистон врачлар Ассоциациясининг раёсатининг таркиби"}</h3>
         <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
@@ -161,7 +165,7 @@ export default function MembersComp() {
         </Table>
         </TableContainer>
 
-        <h3 className='text' style={{padding: "3rem"}}>Ўзбекистон врачлар Ассоциациясининг <br /> тафтиш комиссиясининг таркиби</h3>
+        <h3 className='text' style={{padding: "3rem"}}>{lan? "Состав ревизионной комиссии Ассоциации врачей Узбекистана" : `Ўзбекистон врачлар Ассоциациясининг тафтиш комиссиясининг таркиби`}</h3>
         <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableBody>
