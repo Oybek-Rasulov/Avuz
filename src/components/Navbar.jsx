@@ -241,7 +241,7 @@ function Navbar(props) {
                     </ul>}
 
             {checkHoverFour && <ul className="hover-ul dropFour" onMouseEnter={mouseHoverOnFour} onMouseLeave={mouseHoverOffFour}>
-                        <li><a href="/archieve">Журнал</a></li>
+                        <li><Link to="/archieve">Журнал</Link></li>
                     </ul>}
 
         <div className="media-navbar">
