@@ -134,6 +134,7 @@ a {
     rgba(56, 56, 56, 0.6)), url('/public/images/background.png');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 
 }
 
@@ -412,10 +413,14 @@ a {
 
 .about-content:first-child {
     background-image: url(/public/images/about-images/backgroundOne.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .about-content:nth-child(2) {
     background-image: url(/public/images/about-images/backgroundTwo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .about-content h2 {
@@ -427,7 +432,6 @@ a {
 }
 
 .about-details {
-    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -441,14 +445,11 @@ a {
 }
 
 .about-details p {
-    display: flex;
-    align-items: center;
     text-align: center;
     padding: 1rem 2rem;
     background-color: rgba(255, 255, 255, 0.6);
     height: 100%;
-    font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     color: #333;
     border-radius: 10px;
     line-height: 1.5;
