@@ -1,4 +1,5 @@
 import Carousel from 'react-material-ui-carousel';
+import { Link } from 'react-router-dom';
 import assets from '../assets';
 
 export default function Example() {
@@ -24,29 +25,6 @@ export default function Example() {
 
             }
         ]
-    // }else {
-    //     var items = [
-    //         {
-    //             imageURL: "images/carousel1.png",
-    //             content: "Ўзбекистон Шифокорлар Ассоциацияси 1992-йилда ташкил этилган бўлиб, нодавлат нотижорат жамоавий ташкилот ҳисобланади."
-    //         },
-    //         {
-    //             imageURL: "images/carousel2.png",
-    //             content: "Ўзбекистон Шифокорлар Ассоциацияси 1992-йилда ташкил этилган бўлиб, нодавлат нотижорат жамоавий ташкилот ҳисобланади."
-
-    //         },
-    //         {
-    //             imageURL: "images/carousel3.png",
-    //             content: "Ўзбекистон Шифокорлар Ассоциацияси 1992-йилда ташкил этилган бўлиб, нодавлат нотижорат жамоавий ташкилот ҳисобланади."
-
-    //         },
-    //         {
-    //             imageURL: "images/carousel4.png",
-    //             content: "Ўзбекистон Шифокорлар Ассоциацияси 1992-йилда ташкил этилган бўлиб, нодавлат нотижорат жамоавий ташкилот ҳисобланади."
-
-    //         }
-    //     ]
-    // }
 
     return (
         <Carousel className='carousel-main' style={{ whiteSpace: 'nowrap' }}>  
@@ -70,7 +48,7 @@ function Item(props)
             <div id='carousel-content'>
                 <div>
                     <h3 className='carousel-text'>{props.item.content}</h3>
-                    <a href="/about" className='carousel-btn'>Перейти</a>
+                    <Link to="/about" className='carousel-btn'>Перейти</Link>
                 </div>    
             </div>     
         </div>

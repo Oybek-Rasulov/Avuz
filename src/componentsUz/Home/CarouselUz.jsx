@@ -1,5 +1,6 @@
 import Carousel from 'react-material-ui-carousel';
 import assets from '../assets';
+import { Link } from 'react-router-dom';
 
 export default function Example() {
 
@@ -47,7 +48,7 @@ function Item(props)
             <div id='carousel-content'>
                 <div>
                     <h3 className='carousel-text'>{props.item.content}</h3>
-                    <a href="/about" className='carousel-btn'>Бориш</a>
+                    <Link to="/aboutUz" className='carousel-btn'>Бориш</Link>
                 </div>    
             </div>     
         </div>

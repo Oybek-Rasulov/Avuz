@@ -47,13 +47,13 @@ export default function MiniNavbarUz() {
                     <li>
                          <button onClick={() => handleMenu(2)}><img src={assets.next} alt="arrow" className={menu === 2 ? "menu-arrow" : ""} /> Иш йўналиши   </button>
                          { menu === 2 ? <ul className="sub-menu">
-                            <li> <Link to="http://test.avuz.uz/" target="_blank">Онлайн тренинг</Link> </li>
+                            <li> <Link to="http://test.avuz.uz/">Онлайн тренинг</Link> </li>
                             <li> <Link to="/uz">Лойиҳа фаолияти</Link> </li>
                             <li> <Link to="/uz">Ахборотнома</Link> </li>
                             <li> <Link to="/uz">Умумий амалиёт шифокори бюллетени</Link> </li>
-                            <li> <Link to="/publicationUz" target="_blank">Узбекистон врачлар ассоциацияси тарихи</Link> </li>
-                            <li> <Link to="/doctorsUz" target="_blank">Шифокорлар хукуклари</Link> </li>
-                            <li> <Link to="/membersUz" target="_blank">Кенгаш аъзолари</Link> </li>
+                            <li> <Link to="/publicationUz">Узбекистон врачлар ассоциацияси тарихи</Link> </li>
+                            <li> <Link to="/doctorsUz">Шифокорлар хукуклари</Link> </li>
+                            <li> <Link to="/membersUz">Кенгаш аъзолари</Link> </li>
                          </ul> 
                          : "" }
                     </li>

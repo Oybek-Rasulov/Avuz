@@ -50,90 +50,90 @@ export default function ArchieveComp() {
         </TabPanel>
         <TabPanel style={{display: "flex", position: "absolute", top: "100px"}} value="2">
           <div className='journal-image'>
-                  <Link to="http://test.avuz.uz/uploads/files/1-2014_.pdf" target="_blank">
+                  <Link to="http://test.avuz.uz/uploads/files/1-2014_.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                   </Link>
               </div>
               <div className='journal-image'>
-                  <Link to="http://test.avuz.uz/uploads/files/2-2014_print.pdf" target="_blank">
+                  <Link to="http://test.avuz.uz/uploads/files/2-2014_print.pdf">
                     <img src={assets.archieve1} alt="Journal image" />
                   </Link>
               </div>
               <div className='journal-image'>
-                  <Link to="http://test.avuz.uz/uploads/files/1414413506_3-2014ch-b.pdf" target="_blank">
+                  <Link to="http://test.avuz.uz/uploads/files/1414413506_3-2014ch-b.pdf">
                     <img src={assets.archieve1} alt="Journal image" />
                   </Link>
               </div>
               <div className='journal-image'>
-                  <Link to="http://test.avuz.uz/uploads/files/1420461402_4-2014-7.pdf" target="_blank">
+                  <Link to="http://test.avuz.uz/uploads/files/1420461402_4-2014-7.pdf">
                     <img src={assets.archieve1} alt="Journal image" />
                   </Link>
               </div>
         </TabPanel>
         <TabPanel style={{display: "flex", position: "absolute", top: "100px"}} value="3">
         <div className='journal-image'>
-                  <Link to="http://test.avuz.uz/uploads/files/1-2015.pdf" target="_blank">
+                  <Link to="http://test.avuz.uz/uploads/files/1-2015.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                   </Link>
               </div>
               <div className='journal-image'>
-                  <Link to="http://test.avuz.uz/uploads/files/2-2015.pdf" target="_blank">
+                  <Link to="http://test.avuz.uz/uploads/files/2-2015.pdf">
                     <img src={assets.archieve1} alt="Journal image" />
                   </Link>
               </div>
         </TabPanel>
         <TabPanel style={{display: "flex", position: "absolute", top: "100px"}} value="4">
           <div className='journal-image'>
-                    <Link to="http://test.avuz.uz/uploads/files/2-2016.pdf" target="_blank">
+                    <Link to="http://test.avuz.uz/uploads/files/2-2016.pdf">
                         <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="http://test.avuz.uz/uploads/files/4-2016.pdf" target="_blank">
+                    <Link to="http://test.avuz.uz/uploads/files/4-2016.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
         </TabPanel>
         <TabPanel style={{display: "flex", position: "absolute", top: "100px"}} value="5">
           <div className='journal-image'>
-                    <Link to="http://test.avuz.uz/uploads/files/1-2017.pdf" target="_blank">
+                    <Link to="http://test.avuz.uz/uploads/files/1-2017.pdf">
                         <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="http://test.avuz.uz/uploads/files/2-2017.pdf" target="_blank">
+                    <Link to="http://test.avuz.uz/uploads/files/2-2017.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="http://test.avuz.uz/uploads/files/3-2017.pdf" target="_blank">
+                    <Link to="http://test.avuz.uz/uploads/files/3-2017.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="http://test.avuz.uz/uploads/files/4-2017.pdf" target="_blank">
+                    <Link to="http://test.avuz.uz/uploads/files/4-2017.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
         </TabPanel>
         <TabPanel style={{display: "flex", position: "absolute", top: "100px"}} value="6">
           <div className='journal-image'>
-                    <Link to="http://test.avuz.uz/uploads/files/1-2018.pdf" target="_blank">
+                    <Link to="http://test.avuz.uz/uploads/files/1-2018.pdf">
                         <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="http://test.avuz.uz/uploads/files/2-2018.pdf" target="_blank">
+                    <Link to="http://test.avuz.uz/uploads/files/2-2018.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="http://test.avuz.uz/uploads/files/3-2018.pdf" target="_blank">
+                    <Link to="http://test.avuz.uz/uploads/files/3-2018.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="http://test.avuz.uz/uploads/files/4-2018.pdf" target="_blank">
+                    <Link to="http://test.avuz.uz/uploads/files/4-2018.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
@@ -141,44 +141,44 @@ export default function ArchieveComp() {
         <TabPanel style={{display: "flex", position: "absolute", top: "100px"}} value="7">No file yet</TabPanel>
         <TabPanel style={{display: "flex", position: "absolute", top: "100px"}} value="8">  
                 <div className='journal-image'>
-                    <Link to="https://iamoybekworkbusiness.files.wordpress.com/2022/03/d091d090d092d0a31-2021.pdf" target="_blank">
+                    <Link to="https://iamoybekworkbusiness.files.wordpress.com/2022/03/d091d090d092d0a31-2021.pdf">
                         <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf" target="_blank">
+                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf" target="_blank">
+                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf" target="_blank">
+                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
         </TabPanel>
         <TabPanel style={{display: "flex", position: "absolute", top: "100px"}} value="9">
         <div className='journal-image'>
-                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf" target="_blank">
+                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf">
                         <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf" target="_blank">
+                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf" target="_blank">
+                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>
                 <div className='journal-image'>
-                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf" target="_blank">
+                    <Link to="https://djejnjjdjdjdart.files.wordpress.com/2022/04/d091d090d092d0a32-2020.pdf">
                       <img src={assets.archieve1} alt="Journal image" />
                     </Link>
                 </div>

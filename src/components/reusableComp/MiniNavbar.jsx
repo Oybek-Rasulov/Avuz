@@ -47,13 +47,13 @@ export function MiniNavbar() {
                     <li>
                          <button onClick={() => handleMenu(2)}><img src={assets.next} alt="arrow" className={menu === 2 ? "menu-arrow" : ""} /> Направление работы  </button>
                          { menu === 2 ? <ul className="sub-menu">
-                            <li> <Link to="http://test.avuz.uz/" target="_blank">Онлайн обучение</Link> </li>
+                            <li> <Link to="http://test.avuz.uz/">Онлайн обучение</Link> </li>
                             <li> <Link to="/">Проектная деятельность</Link> </li>
                             <li> <Link to="/">Бюллетень</Link> </li>
                             <li> <Link to="/">Вестник врача общей практики</Link> </li>
-                            <li> <Link to="/publication" target="_blank">История Ассоциации врачей Узбекистана</Link> </li>
-                            <li> <Link to="/doctors" target="_blank">Права врачей</Link> </li>
-                            <li> <Link to="/members" target="_blank">Члены совета</Link> </li>
+                            <li> <Link to="/publication">История Ассоциации врачей Узбекистана</Link> </li>
+                            <li> <Link to="/doctors">Права врачей</Link> </li>
+                            <li> <Link to="/members">Члены совета</Link> </li>
                          </ul> 
                          : "" }
                     </li>

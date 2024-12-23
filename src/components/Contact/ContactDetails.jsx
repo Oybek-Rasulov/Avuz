@@ -34,35 +34,4 @@ export default function ContactComp() {
                 </div>
             </div>
         </div>
-        // } else {
-        //         return <div className="contact">
-        //         <h2 className="news-title">Алоқа</h2>
-        //         <div className="contact-main">
-        //             <div className="contact-content">
-        //                 <div>
-        //                     <CallIcon style={{marginRight: "1.5rem", fontSize: "2rem"}} />
-        //                     <p>+998 71 268 08 17</p>
-        //                 </div>
-        //                 <div>
-        //                     <CallIcon style={{marginRight: "1.5rem", fontSize: "2rem"}} />
-        //                     <p>+998 71 267 32 35</p>
-        //                 </div>
-        //                 <div>
-        //                     <LocationOnIcon style={{marginRight: "1.5rem", fontSize: "2rem"}} />
-        //                     <p>Тошкент шахар, Мирщо Улугбек тумани, Паркент кучаси 51 уй</p>
-        //                 </div>
-        //             </div>
-        //             <div className="contact-map">
-        //             <Iframe
-        //             url={mapURL}
-        //             width="500px"
-        //             height="300px"
-        //             id="myMap"
-        //             display="initial"
-        //             position="relative"
-        //         />
-        //             </div>
-        //         </div>
-        //     </div>
-        // }
 }
